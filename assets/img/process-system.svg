@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="820" viewBox="0 0 1300 820" role="img" aria-labelledby="title desc">
+  <title id="title">陶瓷膜系统工艺流程示意</title>
+  <desc id="desc">预处理、循环泵、陶瓷膜组件、清液和浓液回流组成的工艺系统。</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef5f4"/>
+    </linearGradient>
+    <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#19bca7"/>
+      <stop offset="1" stop-color="#0b756b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1300" height="820" fill="#102f47"/>
+  <path d="M0 618 C260 544 430 650 672 560 C918 470 1048 404 1300 464 L1300 820 L0 820Z" fill="#0b8a7a" opacity=".28"/>
+  <g transform="translate(120 128)">
+    <rect x="0" y="0" width="1060" height="560" rx="12" fill="url(#panel)" opacity=".94"/>
+    <g stroke="#d0dce3" stroke-width="2">
+      <path d="M100 378H978"/>
+      <path d="M100 454H978"/>
+      <path d="M100 530H978"/>
+    </g>
+    <g transform="translate(84 164)">
+      <rect x="0" y="42" width="150" height="250" rx="16" fill="#e9f1f3" stroke="#8fa2af" stroke-width="4"/>
+      <path d="M18 138H132V264H18Z" fill="url(#liquid)" opacity=".85"/>
+      <rect x="22" y="0" width="106" height="54" rx="10" fill="#bd6a3c"/>
+      <rect x="36" y="18" width="78" height="10" rx="5" fill="#fff" opacity=".8"/>
+    </g>
+    <g transform="translate(302 256)">
+      <circle cx="58" cy="58" r="58" fill="#ffffff" stroke="#8fa2af" stroke-width="5"/>
+      <circle cx="58" cy="58" r="30" fill="#0b8a7a"/>
+      <path d="M58 20 L82 78 H34Z" fill="#ffffff" opacity=".78"/>
+    </g>
+    <g transform="translate(510 124)">
+      <rect x="0" y="28" width="312" height="70" rx="35" fill="#dbe5eb" stroke="#8fa2af" stroke-width="4"/>
+      <rect x="0" y="142" width="312" height="70" rx="35" fill="#dbe5eb" stroke="#8fa2af" stroke-width="4"/>
+      <rect x="0" y="256" width="312" height="70" rx="35" fill="#dbe5eb" stroke="#8fa2af" stroke-width="4"/>
+      <g fill="#f8fbfc" stroke="#7f94a2" stroke-width="12">
+        <circle cx="276" cy="63" r="22"/>
+        <circle cx="276" cy="177" r="22"/>
+        <circle cx="276" cy="291" r="22"/>
+      </g>
+    </g>
+    <g transform="translate(910 178)">
+      <rect x="0" y="0" width="92" height="298" rx="12" fill="#e9f1f3" stroke="#8fa2af" stroke-width="4"/>
+      <rect x="18" y="32" width="56" height="92" rx="8" fill="#9ecbc4"/>
+      <rect x="18" y="156" width="56" height="92" rx="8" fill="#d8bb82"/>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-width="10">
+      <path d="M234 330H302" stroke="#0b8a7a"/>
+      <path d="M418 314H510" stroke="#0b8a7a"/>
+      <path d="M822 187H910" stroke="#0b8a7a"/>
+      <path d="M822 301H910" stroke="#0b8a7a"/>
+      <path d="M822 415H910" stroke="#bd6a3c"/>
+      <path d="M956 476V522H154V456" stroke="#bd6a3c"/>
+    </g>
+    <g fill="#102f47" opacity=".76">
+      <rect x="84" y="84" width="172" height="12" rx="6"/>
+      <rect x="84" y="112" width="250" height="9" rx="4"/>
+      <rect x="510" y="84" width="190" height="12" rx="6"/>
+      <rect x="510" y="468" width="276" height="10" rx="5" opacity=".52"/>
+      <rect x="510" y="496" width="218" height="10" rx="5" opacity=".38"/>
+    </g>
+  </g>
+</svg>

@@ -98,6 +98,7 @@
 - 首页文件必须叫 `index.html`。
 - 所有页面链接都要使用相对路径，例如 `products.html`，不要写成本机路径。
 - 图片需要放在 `assets/img/` 里，再用相对路径引用。
+- 新增页面 `support.html`、`resources.html`、`robots.txt` 和 `sitemap.xml` 也需要一并上传或推送，否则导航或站点地图会不完整。
 - 联系方式、二维码和真实参数发布前最好替换掉占位内容。
 
 ## 当前仓库状态

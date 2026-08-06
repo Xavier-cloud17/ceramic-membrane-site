@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/products.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/applications.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/cases.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/support.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/resources.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/about.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/contact.html</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>

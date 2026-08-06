@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">陶瓷膜截面结构示意</title>
+  <desc id="desc">陶瓷膜管截面、通道、外壳和过滤方向示意。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f5ee"/>
+      <stop offset="1" stop-color="#e7f4f1"/>
+    </linearGradient>
+    <linearGradient id="tube" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#96a8b3"/>
+      <stop offset=".35" stop-color="#ffffff"/>
+      <stop offset=".72" stop-color="#d9e2e7"/>
+      <stop offset="1" stop-color="#7b929f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <g opacity=".42" stroke="#cbd7de" stroke-width="1">
+    <path d="M0 96H1200M0 192H1200M0 288H1200M0 384H1200M0 480H1200M0 576H1200M0 672H1200"/>
+    <path d="M120 0V760M240 0V760M360 0V760M480 0V760M600 0V760M720 0V760M840 0V760M960 0V760M1080 0V760"/>
+  </g>
+  <g transform="translate(120 180)">
+    <rect x="46" y="100" width="718" height="132" rx="66" fill="url(#tube)" stroke="#8298a6" stroke-width="5"/>
+    <rect x="160" y="132" width="548" height="68" rx="34" fill="#eff5f8" stroke="#9fb0ba" stroke-width="3"/>
+    <g fill="#102f47" opacity=".2">
+      <circle cx="222" cy="166" r="11"/>
+      <circle cx="270" cy="166" r="11"/>
+      <circle cx="318" cy="166" r="11"/>
+      <circle cx="366" cy="166" r="11"/>
+      <circle cx="414" cy="166" r="11"/>
+      <circle cx="462" cy="166" r="11"/>
+      <circle cx="510" cy="166" r="11"/>
+      <circle cx="558" cy="166" r="11"/>
+      <circle cx="606" cy="166" r="11"/>
+      <circle cx="654" cy="166" r="11"/>
+    </g>
+    <circle cx="820" cy="166" r="92" fill="#ffffff" stroke="#8298a6" stroke-width="5"/>
+    <circle cx="820" cy="166" r="62" fill="#eef4f7" stroke="#b3c1c9" stroke-width="4"/>
+    <g fill="#0b8a7a">
+      <circle cx="792" cy="144" r="9"/>
+      <circle cx="820" cy="144" r="9"/>
+      <circle cx="848" cy="144" r="9"/>
+      <circle cx="792" cy="172" r="9"/>
+      <circle cx="820" cy="172" r="9"/>
+      <circle cx="848" cy="172" r="9"/>
+      <circle cx="806" cy="200" r="9"/>
+      <circle cx="834" cy="200" r="9"/>
+    </g>
+    <path d="M118 42 C260 20 352 58 468 42 C586 26 662 8 742 42" fill="none" stroke="#0b8a7a" stroke-width="10" stroke-linecap="round"/>
+    <path d="M118 290 C282 334 412 304 540 328 C666 352 738 374 888 330" fill="none" stroke="#bd6a3c" stroke-width="10" stroke-linecap="round"/>
+    <g fill="#102f47">
+      <rect x="70" y="394" width="168" height="12" rx="6"/>
+      <rect x="70" y="426" width="276" height="10" rx="5" opacity=".55"/>
+      <rect x="70" y="452" width="226" height="10" rx="5" opacity=".38"/>
+      <rect x="430" y="394" width="168" height="12" rx="6"/>
+      <rect x="430" y="426" width="276" height="10" rx="5" opacity=".55"/>
+      <rect x="430" y="452" width="226" height="10" rx="5" opacity=".38"/>
+      <rect x="790" y="394" width="168" height="12" rx="6"/>
+      <rect x="790" y="426" width="276" height="10" rx="5" opacity=".55"/>
+      <rect x="790" y="452" width="226" height="10" rx="5" opacity=".38"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xavier-cloud17.github.io/ceramic-membrane-site/sitemap.xml

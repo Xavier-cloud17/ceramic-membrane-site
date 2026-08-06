@@ -1,85 +1,151 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>联系我们 | 获取陶瓷纤管膜选型建议</title>
-    <meta name="description" content="联系陶瓷纤管膜团队，提交水样工况，获取产品参数表、选型建议和项目方案沟通。">
+    <title>联系我们 | 提交陶瓷膜项目询盘与水样工况</title>
+    <meta name="description" content="联系陶瓷膜技术团队，提交行业、水样、处理量、目标指标和现场限制，获取陶瓷膜选型建议。">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="返回首页">
-        <span class="brand-mark">CM</span>
-        <span><strong>陶瓷纤管膜</strong><small>工业膜分离方案</small></span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">首页</a>
-        <a href="products.html">产品</a>
-        <a href="applications.html">应用</a>
-        <a href="cases.html">案例</a>
-        <a href="about.html">关于我们</a>
-        <a class="active" href="contact.html">联系我们</a>
-        <a class="nav-cta" href="#inquiry">立即询盘</a>
-      </nav>
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="返回首页">
+          <span class="brand-mark">CM</span>
+          <span><strong>陶瓷膜科技</strong><small>高难度流体分离方案</small></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航"><span></span><span></span><span></span></button>
+        <nav class="site-nav" id="site-nav" aria-label="主导航">
+          <a href="index.html">首页</a>
+          <a href="products.html">产品中心</a>
+          <a href="applications.html">应用场景</a>
+          <a href="cases.html">项目案例</a>
+          <a href="support.html">服务支持</a>
+          <a href="resources.html">资料中心</a>
+          <a href="about.html">关于我们</a>
+          <a href="contact.html">联系我们</a>
+          <a class="nav-cta" href="contact.html#inquiry">获取选型建议</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="page-hero">
-        <p class="eyebrow">Contact</p>
-        <h1>把水样工况发来，先做适配判断</h1>
-        <p>第一版暂不接后台表单，下面的字段用于提醒客户整理信息。你可以把电话、微信、邮箱和二维码替换为真实联系方式。</p>
+        <div class="page-hero-inner">
+          <nav class="breadcrumbs" aria-label="面包屑"><a href="index.html">首页</a><span>联系我们</span></nav>
+          <p class="eyebrow">Contact</p>
+          <h1>提交水样工况，获取陶瓷膜路线初判</h1>
+          <p class="lead">请尽量一次性提供行业来源、处理规模、关键指标、目标水质和现场边界。信息越完整，选型建议越准确。</p>
+          <div class="button-row">
+            <a class="button primary" href="#inquiry">填写询盘表单</a>
+            <a class="button ghost" href="support.html">查看服务流程</a>
+          </div>
+        </div>
       </section>
 
       <section class="section contact-section" id="inquiry">
-        <div class="contact-grid">
-          <aside class="contact-card">
-            <h2>联系方式</h2>
+        <div class="container contact-grid">
+          <form class="inquiry-form reveal" data-inquiry-form data-mailto="Xavier-cloud17@users.noreply.github.com">
+            <p class="eyebrow">Project inquiry</p>
+            <h2>项目询盘</h2>
+            <div class="form-grid">
+              <label>联系人
+                <input name="name" type="text" placeholder="姓名/职务" required>
+              </label>
+              <label>公司
+                <input name="company" type="text" placeholder="公司或项目名称">
+              </label>
+              <label>电话/微信
+                <input name="phone" type="text" placeholder="便于技术沟通" required>
+              </label>
+              <label>邮箱
+                <input name="email" type="email" placeholder="用于发送资料">
+              </label>
+              <label>行业场景
+                <select name="industry">
+                  <option value="含油废水">含油废水</option>
+                  <option value="化工废水">化工废水</option>
+                  <option value="食品/发酵">食品/发酵</option>
+                  <option value="水回用前处理">水回用前处理</option>
+                  <option value="新能源/材料">新能源/材料</option>
+                  <option value="其他">其他</option>
+                </select>
+              </label>
+              <label>处理规模
+                <input name="capacity" type="text" placeholder="例如 50 m³/d 或 10 m³/h">
+              </label>
+            </div>
+            <label>水样工况与目标
+              <textarea name="message" placeholder="请填写 pH、温度、SS、COD、油含量、盐分、目标出水、现场限制等。"></textarea>
+            </label>
+            <button class="button primary" type="submit">生成邮件询盘</button>
+            <p class="form-status" aria-live="polite"></p>
+            <p class="form-note">当前为静态网站表单，会打开本机邮箱生成询盘邮件。正式上线可接入表单服务、CRM 或企业微信。</p>
+          </form>
+
+          <aside class="contact-card reveal">
+            <p class="eyebrow">Contact points</p>
+            <h2>联系信息</h2>
+            <p>以下信息为上线前替换位。建议使用真实电话、微信二维码、邮箱、地址和工作时间。</p>
             <ul class="contact-list">
-              <li><strong>手机 / 微信：</strong>待补充真实联系方式</li>
-              <li><strong>邮箱：</strong>sales@example.com</li>
-              <li><strong>地址：</strong>待补充工厂或办公室地址</li>
-              <li><strong>响应：</strong>工作日 24 小时内回复</li>
+              <li><strong>销售咨询：</strong>请替换为真实手机号/微信</li>
+              <li><strong>技术邮箱：</strong>Xavier-cloud17@users.noreply.github.com</li>
+              <li><strong>服务范围：</strong>水样评估、小试中试、成套装置、工程改造</li>
+              <li><strong>响应建议：</strong>工作日 24 小时内完成初步回复</li>
             </ul>
-            <div class="qr-placeholder">
-              <span>二维码占位</span>
-              <small>替换为企业微信或销售微信二维码</small>
+            <div class="map-panel">
+              <strong>二维码/地图占位</strong>
+              <span>上线前建议替换为企业微信二维码、工厂位置或展厅照片。</span>
             </div>
           </aside>
+        </div>
+      </section>
 
-          <form class="inquiry-form" action="mailto:sales@example.com" method="post" enctype="text/plain">
-            <h2>水样工况信息</h2>
-            <label>
-              公司 / 项目名称
-              <input type="text" name="company" placeholder="例如：某化工废水预处理项目">
-            </label>
-            <label>
-              行业与废水来源
-              <input type="text" name="industry" placeholder="例如：含油废水、印染废水、化工废水">
-            </label>
-            <label>
-              日处理量 / 小时处理量
-              <input type="text" name="capacity" placeholder="例如：100 吨/天">
-            </label>
-            <label>
-              关键水质指标
-              <textarea name="water-quality" rows="4" placeholder="例如：COD、SS、油含量、pH、温度、盐分等"></textarea>
-            </label>
-            <label>
-              处理目标
-              <textarea name="target" rows="4" placeholder="例如：降低悬浮物、保护后端膜系统、回用水预处理"></textarea>
-            </label>
-            <button class="button primary" type="submit">用邮件发送工况</button>
-            <p class="form-note">提示：mailto 只会打开本机邮件客户端。正式上线后可接入表单服务或企业微信。</p>
-          </form>
+      <section class="section muted">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Checklist</p>
+              <h2>发送询盘前，最好补充这些信息</h2>
+            </div>
+            <p class="lead">这组内容能明显提升线索质量。</p>
+          </div>
+          <div class="grid-4">
+            <article class="feature-card reveal">
+              <span class="feature-index">01</span>
+              <h3>行业来源</h3>
+              <p>来自哪个工序，是否间歇排放，是否已经有预处理。</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-index">02</span>
+              <h3>关键指标</h3>
+              <p>SS、COD、油、pH、温度、盐分、粒径或特殊组分。</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-index">03</span>
+              <h3>处理目标</h3>
+              <p>澄清、回用、浓缩、后端膜保护或达标排放前处理。</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-index">04</span>
+              <h3>现场限制</h3>
+              <p>占地、接口、停机窗口、清洗药剂、排放和预算边界。</p>
+            </article>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div><strong>陶瓷纤管膜</strong><p>获取选型建议、参数表和工程方案沟通。</p></div>
-      <div class="footer-links"><a href="index.html">首页</a><a href="products.html">产品</a><a href="applications.html">应用</a><a href="cases.html">案例</a></div>
+      <div class="footer-inner">
+        <div><strong>陶瓷膜科技</strong><p>陶瓷膜产品、应用方案与工程支持入口。</p></div>
+        <div class="footer-links"><h4>产品</h4><a href="products.html#elements">膜元件</a><a href="products.html#modules">膜组件</a><a href="products.html#systems">成套装置</a></div>
+        <div class="footer-links"><h4>方案</h4><a href="applications.html#oil">含油废水</a><a href="applications.html#chemical">化工废水</a><a href="applications.html#reuse">水回用</a></div>
+        <div class="footer-links"><h4>联系</h4><a href="contact.html#inquiry">项目询盘</a><a href="support.html">服务支持</a>
+          <a href="resources.html">资料中心</a><a href="about.html">关于我们</a></div>
+      </div>
+      <div class="footer-bottom">© 2026 陶瓷膜科技示范站。上线前请替换为公司真实名称、资质、联系方式和备案信息。</div>
     </footer>
     <script src="assets/js/main.js"></script>
   </body>
