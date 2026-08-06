@@ -3,6 +3,7 @@ param(
   [string]$RemoteUrl,
 
   [string]$Branch = "main",
+  [string]$PagesBranch = "gh-pages",
   [string]$AuthorName = "",
   [string]$AuthorEmail = "",
   [string]$CommitMessage = "Publish ceramic membrane static site",
@@ -93,9 +94,13 @@ if ($LASTEXITCODE -eq 0) {
 Write-Step "Pushing to GitHub"
 Run-Git @("push", "-u", "origin", $Branch)
 
+Write-Step "Updating GitHub Pages branch $PagesBranch"
+Run-Git @("push", "origin", "$Branch`:$PagesBranch")
+
 Write-Host ""
 Write-Host "Done. Next:"
 Write-Host "1. Open the GitHub repository in your browser."
 Write-Host "2. Go to Settings > Pages."
-Write-Host "3. Set Source to GitHub Actions."
-Write-Host "4. Wait for the Pages workflow to finish."
+Write-Host "3. Set Source to Deploy from a branch."
+Write-Host "4. Set Branch to $PagesBranch and folder to / (root)."
+Write-Host "5. Wait for GitHub Pages to finish publishing."

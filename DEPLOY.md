@@ -11,24 +11,22 @@
 3. 把本文件夹里的所有文件上传到仓库根目录，必须包含 `index.html`。
 4. 进入仓库 `Settings` → `Pages`。
 5. Source 选择 `Deploy from a branch`。
-6. Branch 选择 `master` 或 `main`，目录选择 `/root`。
+6. Branch 选择 `gh-pages`，目录选择 `/root`。
 7. 保存后等待几分钟，GitHub 会生成一个网址。
 
 发布成功后，别人只要访问这个网址，就可以在任意电脑上打开网页。
 
-## 推荐方式的自动发布版本
+## 当前项目的发布方式
 
-项目里已经加入 `.github/workflows/pages.yml`。如果你把这个文件夹推送到 GitHub，并在仓库 `Settings` → `Pages` 里把 Source 改成 `GitHub Actions`，之后每次更新网页并推送到 `main` 或 `master` 分支，GitHub 都会自动发布。
+当前仓库已经按 `gh-pages` 分支发布。也就是说：
 
-自动发布的优点：
-
-- 不用每次手动上传文件。
-- 每次改完网页，推送代码后自动更新公网网站。
-- GitHub 会在 Actions 页面显示发布是否成功。
+- `main` 分支保存你平时编辑的网站源文件。
+- `gh-pages` 分支保存 GitHub Pages 实际发布的网站文件。
+- 访问地址是 `https://xavier-cloud17.github.io/ceramic-membrane-site/`。
 
 ## 用脚本推送到 GitHub
 
-项目里已经加入 `publish-to-github-pages.ps1`。你只需要先在 GitHub 新建一个空仓库，然后把仓库地址填进去。
+项目里已经加入 `publish-to-github-pages.ps1`。你只需要先在 GitHub 新建一个空仓库，然后把仓库地址填进去。脚本会同时推送 `main` 分支和 `gh-pages` 发布分支。
 
 示例：
 
@@ -102,12 +100,12 @@
 - 图片需要放在 `assets/img/` 里，再用相对路径引用。
 - 联系方式、二维码和真实参数发布前最好替换掉占位内容。
 
-## 我现在还不能直接完成的部分
+## 当前仓库状态
 
-当前本地仓库还没有绑定 GitHub、Netlify 或 Vercel 账号，也没有远程仓库地址。要真正生成公网网址，需要你提供或创建其中一个：
+这个项目已经绑定到 GitHub 仓库：
 
-- GitHub 仓库地址，例如 `https://github.com/你的用户名/ceramic-membrane-site.git`
-- Netlify 账号并导入这个文件夹
-- Vercel 账号并导入这个文件夹
+- 仓库：`git@github.com:Xavier-cloud17/ceramic-membrane-site.git`
+- 发布分支：`gh-pages`
+- 公网地址：`https://xavier-cloud17.github.io/ceramic-membrane-site/`
 
-有了远程仓库或托管平台后，网站就可以变成任何电脑都能打开的网址。
+只要这个公网地址能访问，客户、同事或其他电脑就不需要本地文件，也能直接打开网站。

@@ -9,7 +9,6 @@
 已经为常见平台补好部署文件：
 
 - `.nojekyll`：GitHub Pages 静态站点配置
-- `.github/workflows/pages.yml`：GitHub Pages 自动发布流程
 - `publish-to-github-pages.ps1`：把本地网站提交并推送到 GitHub 的辅助脚本
 - `netlify.toml`：Netlify 静态发布配置
 - `vercel.json`：Vercel 静态发布配置
@@ -53,9 +52,6 @@
 ├── publish-to-github-pages.ps1
 ├── netlify.toml
 ├── vercel.json
-├── .github
-│   └── workflows
-│       └── pages.yml
 └── assets
     ├── css
     │   └── style.css
@@ -68,3 +64,9 @@
 ## 上线方式
 
 这是纯静态网页，不需要数据库或后端。可以部署到 GitHub Pages、Netlify、Vercel、对象存储静态网站，或直接放到普通服务器的网站目录。
+
+当前 GitHub Pages 公网地址：
+
+```text
+https://xavier-cloud17.github.io/ceramic-membrane-site/
+```
