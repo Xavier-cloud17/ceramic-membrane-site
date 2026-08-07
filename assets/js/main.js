@@ -17,6 +17,15 @@ if (navToggle && siteNav) {
       document.body.classList.remove("nav-locked");
     }
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteNav.classList.contains("open")) {
+      siteNav.classList.remove("open");
+      navToggle.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-locked");
+    }
+  });
 }
 
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
@@ -55,6 +64,7 @@ const inquiryForm = document.querySelector("[data-inquiry-form]");
 if (inquiryForm) {
   inquiryForm.addEventListener("submit", (event) => {
     event.preventDefault();
+
     const formData = new FormData(inquiryForm);
     const lines = [
       "陶瓷膜项目询盘",
@@ -64,17 +74,17 @@ if (inquiryForm) {
       `邮箱：${formData.get("email") || ""}`,
       `行业场景：${formData.get("industry") || ""}`,
       `处理规模：${formData.get("capacity") || ""}`,
-      `水样工况：${formData.get("message") || ""}`
+      `水样工况与目标：${formData.get("message") || ""}`
     ];
     const subject = encodeURIComponent("陶瓷膜项目询盘");
     const body = encodeURIComponent(lines.join("\n"));
-    const mailto = inquiryForm.dataset.mailto || "Xavier-cloud17@users.noreply.github.com";
+    const mailto = inquiryForm.dataset.mailto || "contact@example.com";
     const status = inquiryForm.querySelector(".form-status");
 
     window.location.href = `mailto:${mailto}?subject=${subject}&body=${body}`;
 
     if (status) {
-      status.textContent = "已生成邮件询盘内容；如未自动打开邮箱，请复制表单信息发送给业务联系人。";
+      status.textContent = "已生成邮件询盘内容；如果没有自动打开邮箱，请手动发送表单信息。";
     }
   });
 }
