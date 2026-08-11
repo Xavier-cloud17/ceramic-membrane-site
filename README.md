@@ -17,6 +17,7 @@ https://xavier-cloud17.github.io/ceramic-membrane-site/
 - `rd.html`：研发实力，覆盖材料、膜层制备、测试评价和中试放大。
 - `honor.html`：资质荣誉，用于承载认证、专利、检测报告和合作证明。
 - `products.html`：产品中心，覆盖陶瓷膜元件、膜组件、实验/中试/成套装置。
+- `product-detail.html`：陶瓷管式膜产品详情页，覆盖参数字段、应用场景、小试中试和询价转化。
 - `applications.html`：行业应用，覆盖含油废水、化工废水、食品发酵、水回用等场景。
 - `cases.html`：项目案例，用于替换真实项目数据。
 - `support.html`：服务支持，覆盖水样评估、小试、中试、工艺包、调试和运维。
@@ -34,6 +35,7 @@ https://xavier-cloud17.github.io/ceramic-membrane-site/
 - 多级导航：对标成熟企业站的“关于我们 / 产品中心 / 行业应用 / 新闻资源 / 人才招聘 / 联系我们”结构。
 - 响应式布局：支持桌面端和移动端菜单。
 - 询盘转化：联系页表单可生成邮件询盘内容。
+- 产品详情：新增面向搜索和销售转发的产品详情页，用于承接型号参数、应用、测试和报价。
 - SEO 基础：每页包含标题、描述；已配置 `robots.txt` 和 `sitemap.xml`。
 - 视觉资产：使用本地 SVG 示意图，避免外链图片失效。
 - 文档沉淀：新增 `SITE_BUILD_PROCESS.md`，说明完整搭建流程、后续服务器部署和团队分工。
@@ -82,6 +84,7 @@ git push origin main:gh-pages
 ├── rd.html
 ├── honor.html
 ├── products.html
+├── product-detail.html
 ├── applications.html
 ├── cases.html
 ├── support.html

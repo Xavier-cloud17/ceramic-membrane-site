@@ -32,11 +32,12 @@ git push origin main:gh-pages
 
 - 首页可访问：`/`
 - 核心页面可访问：`products.html`、`applications.html`、`cases.html`、`about.html`、`contact.html`
-- 新增页面可访问：`founder.html`、`culture.html`、`rd.html`、`honor.html`、`news.html`、`faq.html`、`jobs.html`、`site-process.html`
+- 新增页面可访问：`founder.html`、`culture.html`、`rd.html`、`honor.html`、`product-detail.html`、`news.html`、`faq.html`、`jobs.html`、`site-process.html`
 - 移动端导航可展开，下拉栏目可点击。
 - 联系表单能生成邮件询盘。
 - `sitemap.xml` 包含所有新增页面。
 - GitHub 远端 `main` 与 `gh-pages` 指向同一最新提交。
+- 首页和产品中心可以进入 `product-detail.html`。
 
 ## 服务器部署路线
 
@@ -115,9 +116,20 @@ sudo certbot --nginx -d example.com -d www.example.com
 - 自建后端 API
 - 第三方表单服务
 
-### 7. 运维建议
+### 7. 回滚流程
+
+建议每次服务器发布前保留上一版目录：
+
+```bash
+sudo cp -a /var/www/ceramic-membrane-site /var/www/ceramic-membrane-site.bak.$(date +%Y%m%d%H%M)
+```
+
+如果新版本异常，可以把 Nginx `root` 切回备份目录，或使用 Git 回退到上一版提交后重新 reload Nginx。
+
+### 8. 运维建议
 
 - 每次上线前先在 GitHub Pages 验证。
 - 每月检查链接、表单、证书和 sitemap。
 - 每季度更新案例、资质、产品参数和新闻。
 - 每次替换真实资料后重新检查移动端展示。
+- 每次正式服务器发布后记录提交哈希、上线时间、检查人和回滚点。
