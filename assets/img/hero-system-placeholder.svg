@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">成套膜系统占位图</title>
+  <desc id="desc">工业厂区中的膜分离成套装置和数字化蓝图效果，用于替换为真实工程项目照片。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1c5d74"/>
+      <stop offset=".48" stop-color="#09273e"/>
+      <stop offset="1" stop-color="#071421"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity=".35" fill="#b9d1d7">
+    <rect x="80" y="250" width="300" height="170" rx="10"/>
+    <rect x="430" y="190" width="280" height="210" rx="12"/>
+    <rect x="780" y="260" width="260" height="170" rx="10"/>
+    <rect x="1110" y="195" width="350" height="220" rx="14"/>
+    <rect x="170" y="520" width="310" height="170" rx="10"/>
+    <rect x="560" y="530" width="290" height="180" rx="12"/>
+    <rect x="950" y="510" width="410" height="190" rx="14"/>
+  </g>
+  <g stroke="#8fdcf0" opacity=".28">
+    <path d="M0 614h1600M0 720h1600M120 0v900M350 0v900M610 0v900M880 0v900M1160 0v900M1420 0v900"/>
+    <path d="M0 368h1600M0 480h1600"/>
+  </g>
+  <g transform="translate(520 255)" fill="none" stroke="#58e7ff" stroke-width="5" filter="url(#glow)">
+    <rect x="0" y="220" width="485" height="170" rx="16"/>
+    <rect x="92" y="100" width="310" height="290" rx="18"/>
+    <rect x="160" y="0" width="80" height="390" rx="12"/>
+    <rect x="280" y="38" width="74" height="352" rx="12"/>
+    <path d="M-180 296H0M485 296h210M240 0v-96M318 38V-56"/>
+    <circle cx="240" cy="-112" r="15" fill="#58e7ff"/>
+    <circle cx="318" cy="-72" r="13" fill="#58e7ff"/>
+  </g>
+  <g fill="#46d7ee" opacity=".55">
+    <rect x="190" y="288" width="116" height="14" rx="7"/>
+    <rect x="1185" y="246" width="160" height="14" rx="7"/>
+    <rect x="1010" y="570" width="132" height="14" rx="7"/>
+    <rect x="630" y="592" width="110" height="14" rx="7"/>
+  </g>
+  <path d="M0 0h1600v900H0z" fill="#00192a" opacity=".28"/>
+</svg>

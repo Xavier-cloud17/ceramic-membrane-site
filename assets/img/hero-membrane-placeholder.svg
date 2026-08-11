@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">陶瓷膜元件占位图</title>
+  <desc id="desc">多支陶瓷管式膜元件和绿色能量线，用于替换为真实产品照片。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#06192b"/>
+      <stop offset=".55" stop-color="#0a3b55"/>
+      <stop offset="1" stop-color="#07131f"/>
+    </linearGradient>
+    <linearGradient id="tube" x1="0" x2="1">
+      <stop offset="0" stop-color="#eaf6f2"/>
+      <stop offset=".48" stop-color="#88d7c2"/>
+      <stop offset="1" stop-color="#2d7e76"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g stroke="#45ead1" stroke-width="3" fill="none" opacity=".58" filter="url(#glow)">
+    <path d="M0 502c210-122 310-100 510-18 160 65 275 70 468-18 214-98 352-102 622 6"/>
+    <path d="M0 552c204-90 360-54 560 10 180 58 330 35 512-60 210-110 330-86 528 30"/>
+    <path d="M0 610c198-38 360-20 545 34 240 70 440-30 625-112 170-75 270-70 430 12"/>
+  </g>
+  <g transform="translate(940 160) rotate(13)">
+    <rect x="112" y="12" width="326" height="596" rx="16" fill="#20685f"/>
+    <rect x="78" y="52" width="326" height="596" rx="16" fill="url(#tube)"/>
+    <rect x="110" y="90" width="262" height="520" rx="10" fill="#1b2e3f"/>
+    <rect x="128" y="108" width="226" height="484" rx="8" fill="#39566a"/>
+    <rect x="132" y="112" width="218" height="476" rx="6" fill="#25394b"/>
+  </g>
+  <g transform="translate(810 360) rotate(13)">
+    <rect x="52" y="22" width="345" height="440" rx="14" fill="#1d6159"/>
+    <rect x="22" y="58" width="345" height="440" rx="14" fill="url(#tube)"/>
+    <rect x="58" y="92" width="273" height="370" rx="9" fill="#24384a"/>
+    <rect x="77" y="111" width="235" height="332" rx="7" fill="#3c5d72"/>
+    <rect x="82" y="116" width="225" height="322" rx="6" fill="#263b4c"/>
+  </g>
+  <g opacity=".24" stroke="#fff" stroke-width="2">
+    <path d="M150 140h330M120 190h550M180 245h410M1140 114h260M1160 700h270"/>
+  </g>
+  <path d="M0 700c340-38 560-22 860 20 245 35 495 36 740-26v206H0z" fill="#f4f8fb" opacity=".9"/>
+  <path d="M0 0h1600v900H0z" fill="#001a2c" opacity=".12"/>
+</svg>

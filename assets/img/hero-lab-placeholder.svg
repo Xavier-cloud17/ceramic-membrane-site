@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">实验中试占位图</title>
+  <desc id="desc">实验室台面、中试设备、烧杯和数据曲线，用于替换为真实研发测试照片。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f4fbff"/>
+      <stop offset=".45" stop-color="#83bed0"/>
+      <stop offset="1" stop-color="#13384f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f9ffff" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#5ad2c3" stop-opacity=".46"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect y="600" width="1600" height="300" fill="#e7edf0"/>
+  <rect y="690" width="1600" height="210" fill="#2b4351"/>
+  <g transform="translate(840 130)" opacity=".82">
+    <rect x="0" y="150" width="420" height="390" rx="20" fill="#e7f0f2"/>
+    <rect x="34" y="184" width="352" height="220" rx="12" fill="#173248"/>
+    <path d="M76 340c62-96 125-16 180-88 36-48 88-46 126-10" stroke="#55ead4" stroke-width="8" fill="none"/>
+    <rect x="70" y="445" width="92" height="36" rx="18" fill="#39b8ad"/>
+    <rect x="190" y="445" width="92" height="36" rx="18" fill="#8aa3ad"/>
+  </g>
+  <g transform="translate(265 240)">
+    <path d="M90 0h180l-28 370H118z" fill="url(#glass)" stroke="#eaffff" stroke-width="7"/>
+    <path d="M124 236h112l-9 96h-94z" fill="#3bd8c3" opacity=".72"/>
+    <ellipse cx="180" cy="236" rx="58" ry="15" fill="#8cefe4" opacity=".7"/>
+  </g>
+  <g transform="translate(525 275)">
+    <rect x="30" y="55" width="154" height="344" rx="18" fill="#d9e7ea"/>
+    <rect x="70" y="0" width="74" height="190" rx="16" fill="#eef7f6"/>
+    <rect x="0" y="350" width="214" height="74" rx="16" fill="#22475a"/>
+    <circle cx="106" cy="386" r="24" fill="#55d7cb"/>
+  </g>
+  <g stroke="#fff" stroke-width="2" opacity=".42">
+    <path d="M1040 74h300M1080 104h200M1180 134h245"/>
+    <path d="M108 168h470M128 198h360"/>
+  </g>
+  <g fill="#fff" opacity=".45">
+    <circle cx="1214" cy="522" r="12"/>
+    <circle cx="1250" cy="522" r="12"/>
+    <circle cx="1286" cy="522" r="12"/>
+  </g>
+  <path d="M0 0h1600v900H0z" fill="#001c2e" opacity=".12"/>
+</svg>

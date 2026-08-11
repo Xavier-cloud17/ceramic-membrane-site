@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">公司园区占位图</title>
+  <desc id="desc">蓝天背景下的现代工业园区，用于替换为真实公司外景照片。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#91c8ee"/>
+      <stop offset="0.48" stop-color="#d9edf7"/>
+      <stop offset="1" stop-color="#f7fbff"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#dfe8ea"/>
+      <stop offset="1" stop-color="#b6c9ce"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" x2="1">
+      <stop offset="0" stop-color="#083146"/>
+      <stop offset="1" stop-color="#10685f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <g opacity=".72" fill="#fff">
+    <ellipse cx="292" cy="174" rx="156" ry="42"/>
+    <ellipse cx="405" cy="158" rx="126" ry="36"/>
+    <ellipse cx="1190" cy="134" rx="210" ry="50"/>
+    <ellipse cx="1340" cy="118" rx="120" ry="34"/>
+  </g>
+  <rect y="655" width="1600" height="245" fill="#253f43"/>
+  <rect y="706" width="1600" height="194" fill="#44534b"/>
+  <path d="M0 744h1600v86H0z" fill="#314242"/>
+  <path d="M0 800h1600v100H0z" fill="#2a3437"/>
+  <g transform="translate(130 340)">
+    <rect x="0" y="150" width="515" height="220" rx="10" fill="#f0f3ee"/>
+    <path d="M0 150h515l-46-74H45z" fill="#d8e4e2"/>
+    <rect x="34" y="201" width="78" height="55" fill="#829da6"/>
+    <rect x="135" y="201" width="78" height="55" fill="#829da6"/>
+    <rect x="236" y="201" width="78" height="55" fill="#829da6"/>
+    <rect x="337" y="201" width="78" height="55" fill="#829da6"/>
+    <rect x="0" y="150" width="515" height="18" fill="#39b8ad"/>
+  </g>
+  <g transform="translate(870 210)">
+    <rect x="0" y="210" width="515" height="315" rx="12" fill="#efe9df"/>
+    <rect x="340" y="42" width="142" height="483" fill="#744d37"/>
+    <rect x="364" y="64" width="12" height="418" fill="#c09a73"/>
+    <rect x="398" y="64" width="12" height="418" fill="#c09a73"/>
+    <rect x="432" y="64" width="12" height="418" fill="#c09a73"/>
+    <rect x="40" y="250" width="82" height="58" fill="url(#glass)"/>
+    <rect x="150" y="250" width="82" height="58" fill="url(#glass)"/>
+    <rect x="40" y="348" width="82" height="58" fill="url(#glass)"/>
+    <rect x="150" y="348" width="82" height="58" fill="url(#glass)"/>
+    <rect x="282" y="345" width="142" height="180" fill="#d8e0dc"/>
+  </g>
+  <g transform="translate(190 628)">
+    <rect width="520" height="82" rx="4" fill="url(#gate)" opacity=".96"/>
+    <rect x="56" y="24" width="408" height="36" fill="#e2ddd2" opacity=".84"/>
+    <text x="260" y="49" text-anchor="middle" font-family="Arial, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" fill="#2d403f">公司园区外景占位</text>
+  </g>
+  <g stroke="#fff" stroke-width="5" opacity=".75">
+    <path d="M684 270v368"/>
+    <path d="M714 270v368"/>
+    <path d="M744 270v368"/>
+  </g>
+  <g fill="#2c7d73">
+    <circle cx="86" cy="740" r="38"/>
+    <circle cx="760" cy="720" r="32"/>
+    <circle cx="1445" cy="736" r="42"/>
+  </g>
+  <path d="M0 0h1600v900H0z" fill="#001b2f" opacity=".18"/>
+</svg>
