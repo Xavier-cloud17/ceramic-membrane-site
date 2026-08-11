@@ -5,6 +5,26 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/founder.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/culture.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/rd.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/honor.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/products.html</loc>
     <priority>0.9</priority>
   </url>
@@ -25,11 +45,23 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/about.html</loc>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/news.html</loc>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/faq.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/jobs.html</loc>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/contact.html</loc>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://xavier-cloud17.github.io/ceramic-membrane-site/site-process.html</loc>
+    <priority>0.5</priority>
   </url>
 </urlset>

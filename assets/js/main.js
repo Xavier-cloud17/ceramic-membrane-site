@@ -10,7 +10,8 @@ if (navToggle && siteNav) {
   });
 
   siteNav.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
+    const target = event.target;
+    if (target instanceof HTMLAnchorElement && !target.closest(".nav-group")) {
       siteNav.classList.remove("open");
       navToggle.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
@@ -36,6 +37,10 @@ document.querySelectorAll(".site-nav a[href]").forEach((link) => {
   const targetPage = target.split("#")[0];
   if (targetPage === currentPage) {
     link.classList.add("active");
+    const parentGroup = link.closest(".nav-group");
+    if (parentGroup) {
+      parentGroup.classList.add("active");
+    }
   }
 });
 
