@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
@@ -32,6 +32,7 @@
     <a class="nav-label" href="products.html">产品中心</a>
     <div class="nav-dropdown">
       <a href="products.html#elements">陶瓷膜元件</a>
+      <a href="product-detail.html">陶瓷管式膜详情</a>
       <a href="products.html#modules">膜组件与膜壳</a>
       <a href="products.html#systems">实验/中试/成套装置</a>
       <a href="resources.html">资料下载</a>
@@ -86,21 +87,21 @@
 
       <section class="section contact-section" id="inquiry">
         <div class="container contact-grid">
-          <form class="inquiry-form reveal" data-inquiry-form data-mailto="contact@example.com">
+          <form class="inquiry-form reveal" data-inquiry-form data-mailto="contact@example.com" aria-describedby="form-note">
             <p class="eyebrow">Project inquiry</p>
             <h2>项目询盘</h2>
             <div class="form-grid">
               <label>联系人
-                <input name="name" type="text" placeholder="姓名/职务" required>
+                <input name="name" type="text" placeholder="姓名/职务" autocomplete="name" required>
               </label>
               <label>公司
-                <input name="company" type="text" placeholder="公司或项目名称">
+                <input name="company" type="text" placeholder="公司或项目名称" autocomplete="organization">
               </label>
               <label>电话/微信
-                <input name="phone" type="text" placeholder="便于技术沟通" required>
+                <input name="phone" type="tel" placeholder="便于技术沟通" autocomplete="tel" required>
               </label>
               <label>邮箱
-                <input name="email" type="email" placeholder="用于发送资料">
+                <input name="email" type="email" placeholder="用于发送资料" autocomplete="email">
               </label>
               <label>行业场景
                 <select name="industry">
@@ -112,16 +113,33 @@
                   <option value="其他">其他</option>
                 </select>
               </label>
+              <label>咨询类型
+                <select name="requestType">
+                  <option value="项目选型">项目选型</option>
+                  <option value="产品样册">产品样册</option>
+                  <option value="小试/中试">小试/中试</option>
+                  <option value="成套设备报价">成套设备报价</option>
+                  <option value="售后/运维">售后/运维</option>
+                </select>
+              </label>
               <label>处理规模
                 <input name="capacity" type="text" placeholder="例如 50 m³/d 或 10 m³/h">
               </label>
+              <label>水样状态
+                <select name="sampleStatus">
+                  <option value="已有水样和检测数据">已有水样和检测数据</option>
+                  <option value="已有水样，暂无完整检测">已有水样，暂无完整检测</option>
+                  <option value="仅有工况描述">仅有工况描述</option>
+                  <option value="需要先沟通路线">需要先沟通路线</option>
+                </select>
+              </label>
             </div>
             <label>水样工况与目标
-              <textarea name="message" placeholder="请填写 pH、温度、SS、COD、油含量、盐分、目标出水、现场限制等。"></textarea>
+              <textarea name="message" placeholder="请填写 pH、温度、SS、COD、油含量、盐分、目标出水、现场限制、后端工艺、期望交付时间等。" required></textarea>
             </label>
             <button class="button primary" type="submit">生成邮件询盘</button>
-            <p class="form-status" aria-live="polite"></p>
-            <p class="form-note">当前为静态网站表单，会打开本机邮箱生成询盘邮件。正式上线可接入表单服务、CRM 或企业微信。</p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note" id="form-note">当前为静态网站表单，会打开本机邮箱生成询盘邮件。正式上线可接入表单服务、CRM 或企业微信。</p>
           </form>
 
           <aside class="contact-card reveal">
@@ -172,6 +190,24 @@
               <h3>现场限制</h3>
               <p>占地、接口、停机窗口、清洗药剂、排放和预算边界。</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Response path</p>
+              <h2>收到询盘后的建议响应路径</h2>
+            </div>
+            <p class="lead">把表单线索直接转成技术判断动作。</p>
+          </div>
+          <div class="timeline">
+            <article class="reveal"><span>01</span><h3>确认资料完整度</h3><p>补齐行业来源、处理量、关键指标、目标出水和现场限制。</p></article>
+            <article class="reveal"><span>02</span><h3>技术初判</h3><p>判断陶瓷膜是否适合作为前处理、澄清、浓缩或后端保护单元。</p></article>
+            <article class="reveal"><span>03</span><h3>实验建议</h3><p>需要验证时，给出水样量、测试项目、周期和中试放大条件。</p></article>
+            <article class="reveal"><span>04</span><h3>方案输出</h3><p>基于测试结果形成膜面积、流程、设备清单、清洗策略和报价边界。</p></article>
           </div>
         </div>
       </section>

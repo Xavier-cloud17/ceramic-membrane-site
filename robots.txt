@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://xavier-cloud17.github.io/ceramic-membrane-site/sitemap.xml
+
+# Production note:
+# After a formal domain is approved and switched online, update the Sitemap URL
+# to the canonical production domain, for example https://www.example.com/sitemap.xml.

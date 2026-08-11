@@ -50,6 +50,15 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(189, 106, 60, 0.5);
+  outline-offset: 3px;
+}
+
 img,
 svg {
   display: block;
@@ -475,6 +484,10 @@ h4 {
 .button:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-soft);
+}
+
+.button:focus-visible {
+  box-shadow: 0 0 0 4px rgba(189, 106, 60, 0.22), var(--shadow-soft);
 }
 
 .button.primary {
@@ -1397,6 +1410,13 @@ select {
   border-radius: 6px;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(11, 138, 122, 0.12);
+}
+
 textarea {
   min-height: 132px;
   resize: vertical;
@@ -1407,6 +1427,14 @@ textarea {
   margin: 0;
   color: var(--teal-dark);
   font-weight: 800;
+}
+
+.form-status.is-success {
+  padding: 10px 12px;
+  color: var(--teal-dark);
+  background: rgba(11, 138, 122, 0.08);
+  border: 1px solid rgba(11, 138, 122, 0.18);
+  border-radius: 6px;
 }
 
 .map-panel {
@@ -1531,6 +1559,7 @@ textarea {
     align-items: stretch;
     gap: 0;
     max-height: calc(100vh - 94px);
+    max-height: calc(100dvh - 94px);
     padding: 10px;
     overflow-y: auto;
     background: #fff;
@@ -1627,6 +1656,10 @@ textarea {
 
   .site-nav {
     top: 68px;
+    right: 10px;
+    left: 10px;
+    max-height: calc(100vh - 82px);
+    max-height: calc(100dvh - 82px);
   }
 
   .section,
@@ -1660,6 +1693,20 @@ textarea {
 
   .hero-proof {
     gap: 12px;
+  }
+
+  .hero-actions,
+  .button-row,
+  .cta-actions {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-actions .button,
+  .button-row .button,
+  .cta-actions .button,
+  .inquiry-form .button {
+    width: 100%;
   }
 
   .hero-proof span {
@@ -1711,6 +1758,14 @@ textarea {
 
   .timeline span {
     grid-row: auto;
+  }
+
+  .product-card img {
+    height: 138px;
+  }
+
+  .visual-frame img {
+    min-height: 220px;
   }
 
   .process-grid {

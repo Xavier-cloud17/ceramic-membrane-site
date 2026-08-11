@@ -1,10 +1,21 @@
 # 陶瓷膜企业网站搭建流程
 
-本文档用于后续把当前静态站升级为完整企业官网，并在租用服务器后迁移上线。参考对象为雅瓷官网的信息架构和转化路径，但不复制其代码、素材或文案。
+本文档用于把当前静态站持续升级为可正式上线的企业官网，并明确内容、前端、部署运维三条工作线的交付边界。参考对象为成熟 B2B 企业站的信息架构和转化路径，不复制任何第三方代码、素材或文案。
 
-## 1. 参考站框架拆解
+## 1. 当前阶段定位
 
-雅瓷官网的核心不是某个前端框架，而是成熟 B2B 企业站的栏目组织：
+当前仓库已经具备静态官网原型能力：
+
+- 首页、关于我们、产品中心、产品详情、行业应用、案例、支持、资料、新闻、FAQ、招聘和联系页已建立。
+- `sitemap.xml` 和 `robots.txt` 已包含当前 GitHub Pages 预发布地址。
+- `contact.html` 具备询盘表单，但仍是 `mailto:` 临时方案。
+- GitHub Pages 可作为预发布环境，独立服务器作为正式生产环境。
+
+后续重点不是继续堆页面，而是替换真实内容、确定正式域名、完成备案/SSL、接入表单后端并建立上线检查和回滚机制。
+
+## 2. 参考站框架拆解
+
+成熟陶瓷膜/B2B 工业企业站通常包含：
 
 - 顶部信息条：品牌口号、电话、邮箱。
 - 固定头部：Logo、多级导航、移动端菜单。
@@ -13,13 +24,13 @@
 - 产品中心：产品大类、产品详情、关键参数、应用场景、询价入口。
 - 产品详情页：产品结构图、参数表、适用行业、资料下载、小试中试、报价 CTA。
 - 行业应用：按场景解释客户问题、解决方案和应用价值。
-- 新闻资讯：公司新闻、行业资讯、常见问题。
+- 新闻资讯：公司新闻、行业资讯、技术文章、常见问题。
 - 人才招聘：人才理念、招聘职位。
-- 联系我们：联系方式、地图/二维码、产品询价弹窗或表单。
+- 联系我们：联系方式、地图/二维码、项目询盘表单。
 
-## 2. 当前网站页面清单
+## 3. 页面与内容清单
 
-当前仓库已建立以下静态页面：
+当前仓库页面：
 
 - `index.html`：首页，承接产品、应用、案例、流程和询盘入口。
 - `about.html`、`founder.html`、`culture.html`、`rd.html`、`honor.html`：关于我们栏目组。
@@ -34,103 +45,221 @@
 - `jobs.html`：人才招聘。
 - `contact.html`：项目询盘与联系信息。
 - `site-process.html`：网页化搭建流程摘要。
-- `SITE_BUILD_PROCESS.md`：完整搭建流程文档。
+- `404.html`：错误页。
 
-## 3. 3 个 Codex 任务分配
-
-### Codex A：信息架构与内容
-
-- 提取参考站栏目结构，不复制原站内容。
-- 整理陶瓷膜企业站页面树、导航层级和 CTA 路径。
-- 准备每页真实内容替换清单：公司简介、创始人寄语、产品参数、产品详情、应用场景、案例、资质、新闻、招聘。
-- 输出 SEO 标题、描述、关键词和面包屑命名规范。
-
-### Codex B：前端页面与交互
-
-- 维护 HTML/CSS/JS 静态站结构。
-- 实现响应式多级导航、首页模块、产品卡片、产品详情页、应用表格、FAQ、新闻列表和联系表单。
-- 控制视觉风格：工业感、专业感、清晰参数展示，不使用参考站素材。
-- 检查移动端、桌面端和低网速下的可读性。
-
-### Codex C：部署、GitHub 与服务器
-
-- 维护 GitHub `main` 与 `gh-pages` 发布流程。
-- 更新 `sitemap.xml`、`robots.txt`、`README.md`、`DEPLOY.md`。
-- 当前阶段发布到 GitHub Pages。
-- 租服务器后配置 Nginx、域名、HTTPS、缓存、安全头和日志。
-- 建立上线检查清单：链接、表单、SEO、证书、备案、性能、备份和回滚。
-
-## 4. 内容替换清单
-
-上线前必须把占位内容替换为真实资料：
+上线前必须替换的资料：
 
 - 公司名称、Logo、品牌色、口号。
 - 电话、邮箱、微信、地址、地图、二维码。
 - 产品型号、孔径、膜面积、材质、通量范围、pH、温度、清洗条件。
-- 产品详情页需要补齐真实型号图、剖面图、参数表、测试条件和资料下载链接。
+- 产品详情页真实型号图、剖面图、参数表、测试条件和资料下载链接。
 - 产品照片、设备照片、车间照片、团队照片。
 - 真实案例：行业、处理量、水质、工艺、运行周期、客户反馈。
 - 资质证书、检测报告、专利、认证、合作证明。
 - 新闻文章、招聘岗位、企业文化原文。
 - 备案号、隐私政策、表单授权声明。
 
-## 5. GitHub Pages 发布流程
+## 4. 三条工作线
+
+### 4.1 内容与信息架构
+
+负责人关注：
+
+- 页面树、导航层级、面包屑命名和 CTA 路径。
+- 每页 SEO 标题、描述、关键词和目标询盘动作。
+- 真实产品、案例、资质、新闻、招聘和联系信息替换。
+- 表单字段与销售线索字段统一。
+
+交付物：
+
+- 页面内容替换表。
+- 产品参数表和资料下载清单。
+- 案例素材清单。
+- SEO 标题/描述清单。
+
+### 4.2 前端页面与交互
+
+负责人关注：
+
+- HTML/CSS/JS 静态站结构。
+- 响应式多级导航、产品卡片、详情页参数表、FAQ、新闻列表和联系表单。
+- 移动端可读性和点击区域。
+- 所有图片本地化或可靠托管，避免外链失效。
+
+交付物：
+
+- 可本地预览的静态页面。
+- 移动端和桌面端检查结果。
+- 页面链接和 404 检查结果。
+
+### 4.3 部署运维线
+
+负责人关注：
+
+- GitHub `main` 和 `gh-pages` 的发布流程。
+- GitHub Pages 预发布配置。
+- `README.md`、`DEPLOY.md`、`SITE_BUILD_PROCESS.md`、`sitemap.xml`、`robots.txt` 持续更新。
+- 独立服务器 Nginx、域名、备案、HTTPS、缓存、安全头、日志和备份。
+- 表单后端、上线检查、发布记录和回滚演练。
+
+交付物：
+
+- 可执行部署手册。
+- 生产服务器 Nginx 配置。
+- 上线检查清单。
+- 回滚步骤和发布记录模板。
+
+## 5. GitHub Pages 阶段流程
+
+GitHub Pages 用于预发布和静态验收。
+
+1. 本地完成页面和文档修改。
+2. 启动本地静态服务器，逐页检查。
+3. 确认 `sitemap.xml` 和 `robots.txt` 仍指向当前预发布地址。
+4. 提交到 `main`。
+5. 发布负责人推送 `main` 到远端。
+6. 发布负责人推送 `main:gh-pages`。
+7. 在 GitHub `Settings -> Pages` 确认发布源为 `gh-pages / root`。
+8. 访问 GitHub Pages 地址检查首页、产品详情、联系页、sitemap、robots 和 404。
+
+发布命令示例：
 
 ```powershell
 cd "D:\Users\Lenovo\Documents\网页\ceramic-membrane-site"
 git status --short --branch
 git add .
-git commit -m "Expand corporate website framework"
+git commit -m "Update corporate website"
 git push origin main
 git push origin main:gh-pages
 ```
 
-发布后检查：
+推送后等待 GitHub Pages 缓存刷新，再检查线上首页、产品详情页、联系页、sitemap 和 robots。
 
-- `https://xavier-cloud17.github.io/ceramic-membrane-site/`
-- 首页、产品、应用、案例、关于、新闻、FAQ、招聘、联系页面是否返回 200。
-- `product-detail.html` 是否可以从首页、产品中心、sitemap 进入。
-- 移动端菜单是否可展开。
-- `contact.html` 表单是否能生成邮件询盘。
-- `sitemap.xml` 是否包含新增页面。
+## 6. 正式域名与备案流程
 
-## 6. 未来服务器部署流程
+正式域名前置事项：
 
-1. 购买云服务器，推荐 2C2G 起步，系统使用 Ubuntu LTS。
-2. 购买域名并完成备案。
-3. 安装 Nginx：
+1. 选择主域名，例如 `example.com` 或 `www.example.com`。
+2. 完成域名实名认证。
+3. 如果使用中国大陆服务器，通过接入服务商提交 ICP 备案。
+4. 备案通过后，在网站页脚展示备案号。
+5. 如需公安联网备案，按所在地要求继续办理并展示公安备案号。
+6. 将正式域名写入 `sitemap.xml`、`robots.txt`、页面 canonical 和站长平台。
+7. DNS 解析到生产服务器公网 IP。
+
+注意：
+
+- 备案未完成前，不建议把中国大陆服务器绑定为正式公开域名。
+- GitHub Pages 自定义域名应先在 Pages 设置里添加域名，再配置 DNS。
+- 自定义域名生效后应开启 HTTPS，避免 HTTP 与 HTTPS 混用。
+
+## 7. 独立服务器上线流程
+
+推荐生产结构：
+
+```text
+/var/www/ceramic-membrane-site/
+|-- releases/
+|   |-- 20260811-1530-<git-sha>/
+|   `-- 20260820-1010-<git-sha>/
+|-- current -> /var/www/ceramic-membrane-site/releases/20260820-1010-<git-sha>
+`-- backups/
+```
+
+上线步骤：
+
+1. 购买服务器，安装 Ubuntu LTS。
+2. 开放 80/443，限制 SSH 管理来源。
+3. 安装 Nginx、Git、rsync、curl。
+4. 上传或拉取站点文件到新的 release 目录。
+5. 更新 `current` 软链接指向新 release。
+6. 配置 Nginx root 到 `/var/www/ceramic-membrane-site/current`。
+7. 执行 `sudo nginx -t`。
+8. 执行 `sudo systemctl reload nginx`。
+9. 配置 Certbot/Let's Encrypt 证书。
+10. 执行 `sudo certbot renew --dry-run`。
+11. 检查 HTTPS、404、静态资源缓存、安全头和日志。
+
+Nginx 最小配置和 HTTPS 配置见 `DEPLOY.md`。
+
+## 8. 表单后端升级流程
+
+当前 `contact.html` 的 `mailto:` 方案只适合演示。正式上线建议按以下顺序升级：
+
+1. 确认销售线索字段：姓名、公司、电话、邮箱、行业、处理量、需求描述、附件需求、来源页面。
+2. 选择承接系统：企业邮箱、CRM、企业微信机器人、Serverless 表单或自建 API。
+3. 建立后端接口，例如 `POST /api/inquiries`。
+4. 前端表单从 `mailto:` 改为 `fetch()` 提交。
+5. 后端完成校验、反垃圾、限流、通知和日志。
+6. 页面增加隐私授权声明。
+7. 上线前测试成功提交、失败提示、重复提交、恶意输入和通知送达。
+
+最低运维要求：
+
+- SMTP/Webhook/CRM Token 只能放后端环境变量。
+- 表单日志不记录敏感密钥。
+- 失败提交可追踪，重要线索有重试机制。
+- 每周抽查表单通知链路。
+
+## 9. 回滚与发布记录
+
+### 9.1 发布记录模板
+
+```text
+发布时间：
+发布人：
+检查人：
+Git SHA：
+环境：GitHub Pages / 生产服务器
+修改范围：
+上线前检查结果：
+回滚点：
+上线后检查结果：
+备注：
+```
+
+### 9.2 GitHub Pages 回滚
+
+```powershell
+git log --oneline --decorate --all -20
+git push origin <previous-good-sha>:gh-pages --force-with-lease
+```
+
+如果 `main` 也需要回退，优先使用 `git revert` 生成反向提交。
+
+### 9.3 生产服务器回滚
 
 ```bash
-sudo apt update
-sudo apt install nginx
+sudo ln -sfn /var/www/ceramic-membrane-site/releases/<previous-good-release> /var/www/ceramic-membrane-site/current
+sudo nginx -t
+sudo systemctl reload nginx
 ```
 
-4. 上传站点文件到 `/var/www/ceramic-membrane-site`。
-5. 配置 Nginx：
+回滚后检查：首页、产品页、联系页、表单通知、HTTPS、日志和 404。
 
-```nginx
-server {
-    listen 80;
-    server_name example.com www.example.com;
-    root /var/www/ceramic-membrane-site;
-    index index.html;
+## 10. 上线检查节奏
 
-    location / {
-        try_files $uri $uri/ =404;
-    }
-}
-```
+每次上线前：
 
-6. 使用 Certbot 配置 HTTPS。
-7. 增加缓存、安全头、日志轮转和定期备份。
-8. 表单接入企业邮箱、表单服务、CRM 或企业微信机器人。
-9. 建立回滚策略：保留上一版站点目录或上一版 Git tag，Nginx root 可快速切回。
-10. 建立发布记录：记录发布时间、提交哈希、修改范围、检查人和回滚点。
+- 运行本地预览。
+- 检查所有核心页面和导航。
+- 检查移动端布局。
+- 检查 `sitemap.xml`、`robots.txt`、canonical 和正式域名。
+- 检查备案号、隐私政策和表单授权声明。
+- 检查 Nginx 配置、SSL 证书、日志和回滚点。
+- 检查表单通知链路。
 
-## 7. 维护节奏
+每次上线后：
 
-- 每周检查表单、链接、页面状态和 GitHub Pages 发布状态。
-- 每月发布至少 1 篇行业/技术文章。
-- 每季度更新产品参数、案例和资质。
-- 每次上线前执行链接检查、移动端检查、SEO 检查和 GitHub 分支检查。
-- 每次正式服务器上线前执行 `nginx -t`、证书检查、备份和回滚演练。
+- 记录发布信息。
+- 检查访问日志和错误日志。
+- 访问核心页面确认 200。
+- 提交 sitemap 到搜索引擎站长平台。
+- 保留本次 release，至少保留最近 3 个可回滚版本。
+
+长期维护：
+
+- 每周检查页面状态、表单和死链。
+- 每月检查 SSL、Nginx 日志、sitemap、robots 和页面性能。
+- 每季度更新案例、资质、产品参数、新闻和招聘。
+- 每次大改先在 GitHub Pages 验收，再生产上线。

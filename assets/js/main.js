@@ -1,30 +1,66 @@
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector("#site-nav");
 
+const addDropdownLink = (groupLabel, afterHref, href, text) => {
+  if (!siteNav) return;
+
+  const groups = Array.from(siteNav.querySelectorAll(".nav-group"));
+  const group = groups.find((item) => {
+    const label = item.querySelector(".nav-label");
+    return label && label.textContent.trim() === groupLabel;
+  });
+
+  if (!group || group.querySelector(`a[href="${href}"]`)) return;
+
+  const afterLink = group.querySelector(`a[href="${afterHref}"]`);
+  const dropdown = group.querySelector(".nav-dropdown");
+  if (!afterLink || !dropdown) return;
+
+  const link = document.createElement("a");
+  link.href = href;
+  link.textContent = text;
+  afterLink.insertAdjacentElement("afterend", link);
+};
+
+addDropdownLink("产品中心", "products.html#elements", "product-detail.html", "陶瓷管式膜详情");
+addDropdownLink("新闻与资源", "resources.html", "resources.html#replacement-list", "真实资料清单");
+
 if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("open");
+  const setNavState = (isOpen) => {
+    siteNav.classList.toggle("open", isOpen);
     navToggle.classList.toggle("is-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "关闭导航" : "打开导航");
     document.body.classList.toggle("nav-locked", isOpen);
+  };
+
+  navToggle.addEventListener("click", () => {
+    setNavState(!siteNav.classList.contains("open"));
   });
 
   siteNav.addEventListener("click", (event) => {
     const target = event.target;
-    if (target instanceof HTMLAnchorElement && !target.closest(".nav-group")) {
-      siteNav.classList.remove("open");
-      navToggle.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("nav-locked");
+    if (target instanceof HTMLAnchorElement && siteNav.classList.contains("open")) {
+      setNavState(false);
     }
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && siteNav.classList.contains("open")) {
-      siteNav.classList.remove("open");
-      navToggle.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("nav-locked");
+      setNavState(false);
+      navToggle.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (
+      siteNav.classList.contains("open") &&
+      target instanceof Node &&
+      !siteNav.contains(target) &&
+      !navToggle.contains(target)
+    ) {
+      setNavState(false);
     }
   });
 }
@@ -37,6 +73,7 @@ document.querySelectorAll(".site-nav a[href]").forEach((link) => {
   const targetPage = target.split("#")[0];
   if (targetPage === currentPage) {
     link.classList.add("active");
+    link.setAttribute("aria-current", "page");
     const parentGroup = link.closest(".nav-group");
     if (parentGroup) {
       parentGroup.classList.add("active");
@@ -70,26 +107,41 @@ if (inquiryForm) {
   inquiryForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    if (!inquiryForm.checkValidity()) {
+      inquiryForm.reportValidity();
+      return;
+    }
+
     const formData = new FormData(inquiryForm);
+    const getField = (name) => String(formData.get(name) || "").trim();
     const lines = [
       "陶瓷膜项目询盘",
-      `联系人：${formData.get("name") || ""}`,
-      `公司：${formData.get("company") || ""}`,
-      `电话/微信：${formData.get("phone") || ""}`,
-      `邮箱：${formData.get("email") || ""}`,
-      `行业场景：${formData.get("industry") || ""}`,
-      `处理规模：${formData.get("capacity") || ""}`,
-      `水样工况与目标：${formData.get("message") || ""}`
+      `联系人：${getField("name")}`,
+      `公司：${getField("company")}`,
+      `电话/微信：${getField("phone")}`,
+      `邮箱：${getField("email")}`,
+      `行业场景：${getField("industry")}`,
+      `咨询类型：${getField("requestType")}`,
+      `处理规模：${getField("capacity")}`,
+      `水样状态：${getField("sampleStatus")}`,
+      `水样工况与目标：${getField("message")}`
     ];
     const subject = encodeURIComponent("陶瓷膜项目询盘");
     const body = encodeURIComponent(lines.join("\n"));
     const mailto = inquiryForm.dataset.mailto || "contact@example.com";
     const status = inquiryForm.querySelector(".form-status");
 
+    if (status) {
+      status.classList.add("is-success");
+      status.textContent = "已生成邮件询盘内容，正在尝试打开邮箱客户端。";
+    }
+
     window.location.href = `mailto:${mailto}?subject=${subject}&body=${body}`;
 
-    if (status) {
-      status.textContent = "已生成邮件询盘内容；如果没有自动打开邮箱，请手动发送表单信息。";
-    }
+    window.setTimeout(() => {
+      if (status) {
+        status.textContent = "如果没有自动打开邮箱，请复制表单内容并手动发送。";
+      }
+    }, 1200);
   });
 }
