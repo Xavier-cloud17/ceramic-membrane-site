@@ -36,13 +36,13 @@
           <nav class="breadcrumbs" aria-label="面包屑"><a href="index.html">首页</a><span>搭建流程</span></nav>
           <p class="eyebrow">Build process</p>
           <h1>对标雅瓷框架的企业网站搭建流程</h1>
-          <p class="lead">本页是流程摘要，完整文档已同步到 GitHub 根目录的 SITE_BUILD_PROCESS.md，便于后续交给团队执行。</p>
+          <p class="lead">本页是流程摘要，完整文档已同步到 GitHub 根目录的 SITE_BUILD_PROCESS.md 与 YACI_REFERENCE_FRAMEWORK.md，便于后续交给团队和 3 个 Codex 继续执行。</p>
         </div>
       </section>
       <section class="section">
         <div class="container">
           <div class="timeline">
-            <article class="reveal"><span>01</span><h3>拆参考站框架</h3><p>提取导航、首页模块、产品/应用/新闻/招聘/联系栏目和询盘转化路径。</p></article>
+            <article class="reveal"><span>01</span><h3>拆参考站框架</h3><p>提取顶部信息条、多级导航、首页轮播、产品/应用/新闻/招聘/联系栏目和询盘转化路径。</p></article>
             <article class="reveal"><span>02</span><h3>建立信息架构</h3><p>形成首页、关于、产品中心、产品详情、应用、案例、服务、资源、新闻、FAQ、招聘、联系等页面。</p></article>
             <article class="reveal"><span>03</span><h3>前端实现</h3><p>用静态 HTML/CSS/JS 实现响应式、多级导航、产品详情页、CTA、表单、SEO 和站点地图。</p></article>
             <article class="reveal"><span>04</span><h3>内容替换</h3><p>替换公司名称、联系方式、资质、产品参数、真实案例、新闻和下载资料。</p></article>
@@ -50,8 +50,26 @@
           </div>
           <div class="center-actions">
             <a class="button primary" href="SITE_BUILD_PROCESS.md">查看完整 Markdown 文档</a>
+            <a class="button secondary" href="YACI_REFERENCE_FRAMEWORK.md">查看对标框架文档</a>
             <a class="button secondary" href="product-detail.html">查看产品详情页</a>
             <a class="button secondary" href="contact.html#inquiry">进入询盘表单</a>
+          </div>
+        </div>
+      </section>
+      <section class="section muted">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Codex control room</p>
+              <h2>总控 + 3 个 Codex 的执行分工</h2>
+            </div>
+            <p class="lead">后续继续迭代时，按文件边界分工，最后由总控统一合并、检查和推送，避免多人同时覆盖同一页面。</p>
+          </div>
+          <div class="grid-4">
+            <article class="feature-card reveal"><span class="feature-index">A</span><h3>内容与信息架构</h3><p>负责页面树、SEO、栏目命名、真实资料替换清单和 CTA 路径。</p></article>
+            <article class="feature-card reveal"><span class="feature-index">B</span><h3>前端视觉与交互</h3><p>负责首页轮播、顶部信息条、悬浮咨询、响应式和表单体验。</p></article>
+            <article class="feature-card reveal"><span class="feature-index">C</span><h3>页面与部署运维</h3><p>负责产品/应用/联系/资料页、sitemap、GitHub Pages 和服务器路线。</p></article>
+            <article class="feature-card reveal"><span class="feature-index">M</span><h3>总控合并发布</h3><p>负责验收、提交 main、同步 gh-pages、检查线上页面和回滚点。</p></article>
           </div>
         </div>
       </section>

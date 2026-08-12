@@ -29,6 +29,7 @@ https://xavier-cloud17.github.io/ceramic-membrane-site/
 - `jobs.html`：人才招聘，覆盖人才理念和招聘职位。
 - `contact.html`：联系我们，包含项目询盘表单。
 - `site-process.html`：网页化搭建流程摘要。
+- `YACI_REFERENCE_FRAMEWORK.md`：对标雅瓷公开框架后的企业站拆解、三路 Codex 分工和完整执行流程。
 - `404.html`：错误页。
 
 ## 已完成能力
@@ -42,6 +43,7 @@ https://xavier-cloud17.github.io/ceramic-membrane-site/
 - 视觉资产：使用本地 SVG 示意图，避免外链图片失效。
 - 部署文档：`DEPLOY.md` 覆盖 GitHub Pages、`gh-pages`、独立服务器、备案、SSL、Nginx、表单后端、回滚和上线检查。
 - 流程文档：`SITE_BUILD_PROCESS.md` 说明从静态站到正式官网的构建、上线和维护节奏，并明确“总控 + 3 个 Codex”的协作分工。
+- 对标框架：新增 `YACI_REFERENCE_FRAMEWORK.md`，单独沉淀参考站公开栏目、首页节奏、转化路径、服务器阶段和上线清单。
 
 ## Codex 协作分工
 
@@ -51,6 +53,8 @@ https://xavier-cloud17.github.io/ceramic-membrane-site/
 - Codex B：前端视觉与交互，负责首页轮播、导航、响应式、产品/案例/FAQ/表单体验。
 - Codex C：部署运维，负责 GitHub Pages、`gh-pages`、服务器、备案、SSL、Nginx、表单后端、检查和回滚。
 - 总控：负责审查三方建议、保持文件一致性、本地验收、提交到 `main` 并同步发布到 `gh-pages`。
+
+详细任务包见 `YACI_REFERENCE_FRAMEWORK.md`，该文档可直接作为后续继续派发给 3 个 Codex 的工作说明。
 
 ## 本地预览
 

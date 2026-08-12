@@ -1,5 +1,33 @@
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector("#site-nav");
+const siteHeader = document.querySelector(".site-header");
+
+if (siteHeader && !document.querySelector(".utility-bar")) {
+  siteHeader.insertAdjacentHTML(
+    "beforebegin",
+    `<div class="utility-bar" aria-label="企业联系信息">
+      <div class="utility-inner">
+        <span>陶瓷膜元件 / 膜组件 / 实验中试 / 成套系统</span>
+        <div class="utility-links">
+          <a href="contact.html#inquiry">项目询盘</a>
+          <a href="resources.html">资料中心</a>
+          <a href="site-process.html">搭建流程</a>
+        </div>
+      </div>
+    </div>`
+  );
+}
+
+if (!document.querySelector(".contact-dock")) {
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    `<aside class="contact-dock" aria-label="快速联系">
+      <a href="contact.html#inquiry"><strong>询盘</strong><span>提交水样工况</span></a>
+      <a href="product-detail.html"><strong>产品</strong><span>查看参数详情</span></a>
+      <a href="YACI_REFERENCE_FRAMEWORK.md"><strong>流程</strong><span>对标框架文档</span></a>
+    </aside>`
+  );
+}
 
 const addDropdownLink = (groupLabel, afterHref, href, text) => {
   if (!siteNav) return;
@@ -64,8 +92,6 @@ if (navToggle && siteNav) {
     }
   });
 }
-
-const siteHeader = document.querySelector(".site-header");
 
 if (siteHeader && document.body.classList.contains("home-page")) {
   const syncHeaderTone = () => {
